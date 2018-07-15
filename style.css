@@ -1,6 +1,35 @@
+body {
+  margin: 0;
+  background-color: #d7d7d7;
+  font-family: "Gaegu", cursive;
+}
+
+.title {
+  text-align: center;
+}
+
+.main {
+  padding: 10px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+.question {
+  text-align: center;
+}
+
+.answers {
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  /* height: 100vh; */
+}
+
 .voting-button {
   color: #550527;
-  font-size: 24px;
+  font-size: 20px;
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
@@ -9,7 +38,31 @@
 }
 
 .voting-button--selected {
-  color: #FFF;
+  color: #fff;
   background-color: #550527;
   border: 2px solid white;
+}
+/* 
+.scorecard {
+  background-image: url("./pat-kwon-603556-unsplash.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+} */
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background: #ddd7c9;
+  opacity: 0.8;
+}
+
+.footer__credits {
+  padding: 20px;
 }

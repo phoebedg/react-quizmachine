@@ -1,5 +1,4 @@
 export function receiveQuestion(data) {
-  console.log("Step 4 - creating RECEIVE_QUESTION question object");
   return {
     type: "RECEIVE_QUESTION",
     question: data.results
@@ -8,8 +7,7 @@ export function receiveQuestion(data) {
 
 export function fetchQuestionFromAPI() {
   return function(dispatch) {
-    console.log("Step 3: calling fetch");
-    fetch("https://opentdb.com/api.php?amount=1&type=multiple")
+    fetch("https://opentdb.com/api.php?amount=1&type=multiple&encode=url3986")
       .then(response => response.json())
       .then(data => {
         console.log("data:", data);
@@ -18,5 +16,13 @@ export function fetchQuestionFromAPI() {
       .catch(function(error) {
         console.log("something went wrong");
       });
+  };
+}
+
+export function returnScore(button) {
+  console.log("Button:", button);
+  return {
+    type: "GET_BUTTON_VALUE",
+    buttonValue: button
   };
 }

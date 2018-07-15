@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
-import { fetchQuestionFromAPI } from "../actions";
-import Question from "../components/Question";
+import Answers from "../components/Answers";
+import { returnScore } from "../actions";
 
 const mapStateToProps = reduxState => {
   return {
@@ -10,11 +10,13 @@ const mapStateToProps = reduxState => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchQuestion: dispatch(fetchQuestionFromAPI())
+    handleClick: button => {
+      dispatch(returnScore(button));
+    }
   };
 };
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Question);
+)(Answers);

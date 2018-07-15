@@ -6,16 +6,25 @@ class Question extends React.Component {
   }
 
   componentDidMount() {
-    console.log("Step 1: calling fetchQuestion");
     this.props.fetchQuestion;
   }
 
   render() {
+    const { question } = this.props;
     console.log("this.props.question:", this.props.question);
     return (
       <div>
-        <p>Question</p>
-        <p>{this.props.question.category}</p>
+        {question.map(el => {
+          const plainCategory = decodeURIComponent(el.category);
+          const plainQuestion = decodeURIComponent(el.question);
+          return (
+            <div className="question">
+              <p>Category: {plainCategory}</p>
+              <p>{plainQuestion}</p>
+              <p>(Difficulty level: {el.difficulty})</p>
+            </div>
+          );
+        })}
       </div>
     );
   }
