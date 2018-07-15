@@ -14,6 +14,10 @@ class Scorecard extends React.Component {
     }
     return (
       <div className="scorecard">
+        <img
+          className="scorecard__image"
+          src="./pat-kwon-603556-unsplash.jpg"
+        />
         <p>Score: {score}</p>
       </div>
     );

@@ -42,13 +42,14 @@ body {
   background-color: #550527;
   border: 2px solid white;
 }
-/* 
-.scorecard {
+
+/* .scorecard {
   background-image: url("./pat-kwon-603556-unsplash.jpg");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
+  height: 100%;
 } */
 
 .footer {
